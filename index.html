@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JOB Application Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    
 </head>
 <body>
+    <header class="w-[80%] mx-auto ">
+        <h1 class="text-4xl font-bold text-blue-950 mb-[30px] mt-[50px]">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-5 ">
+            <div class="bg-stone-100 p-6 rounded-2xl">
+                <p  class="text-[16px] font-semibold text-gray-600">Total</p>
+                <p class="text-3xl font-bold text-blue-950" id="total">0</p>
+            </div>
+
+            <div class="bg-stone-100 p-6 rounded-2xl">
+                <p class="text-[16px] font-semibold text-gray-600">Interview</p>
+                <p class="text-3xl font-bold text-green-600" id="interviewCount">0</p>
+            </div>
+
+            <div class="bg-stone-100 p-6 rounded-2xl">
+                <p class="text-[16px] font-semibold text-gray-600">Rejected</p>
+                <p class="text-3xl font-bold text-red-600" id="rejectedCount">0</p>
+            </div>
+        </div>
+    </header>
+
+    <hr class="my-5 w-[80%] mx-auto text-[#E6E7E9] ">
+
+    <main class="w-[80%] mx-auto">
+        <div>
+            <button id="all-btn">All</button>
+            <button id="interview-btn">Interview</button>
+            <button id="rejected-btn">Rejected</button>
+        </div>
+    </main>
     
 </body>
 </html>
