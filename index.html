@@ -6,6 +6,7 @@
     <title>JOB Application Tracker</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/tailwind.css">
     
     
     
@@ -35,7 +36,13 @@
 
 
     <main class="w-[80%] mx-auto">
-        <h1 class="text-2xl font-semibold text-blue-950 mb-4">Available Jobs</h1>
+        <div>
+            <div class="flex justify-between">
+                <h1 class="text-2xl font-semibold text-blue-950 mb-4">Available Jobs</h1>
+                <p class="font-semibold">8 Jobs</p>
+            </div>
+            
+        </div>
         
         <div class=" flex gap-3">
             <button onclick="toggleStyle('all-btn')" class="bg-[#3498db] text-white px-5 py-1  rounded-[4px]" id="all-btn">All</button>
@@ -47,7 +54,7 @@
 
         <!-- filter card -->
 
-        <section id="filter-section">
+        <section id="filter-section" class="hidden">
 
         </section>
 
@@ -68,8 +75,8 @@
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -84,19 +91,19 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">WebFlow Agency</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">Web Designer & Developer</p>
+                        <p class="remote text-[14px] text-gray-400 ">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -112,19 +119,21 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">DataViz Solutions</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">Data Visualization Specialist</p>
+                        <p class="remote text-[14px] text-gray-400 ">
+                            Boston, MA •Full-time• $125,000 - $165,000
+                        </p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -140,19 +149,19 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">CloudFirst Inc</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">Backend Developer</p>
+                        <p class="remote text-[14px] text-gray-400 ">Seattle, WA •Full-time • $140,000 - $190,000</p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -168,19 +177,19 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Innovation Labs</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">UI/UX Engineer</p>
+                        <p class="remote text-[14px] text-gray-400 ">Austin, TX •Full-time •$110,000 - $150,000</p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -196,19 +205,19 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">MegaCorp Solutions</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">JavaScript Developer</p>
+                        <p class="remote text-[14px] text-gray-400 ">New York, NY • Full-time •$130,000 - $170,00</p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -224,19 +233,19 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">StartupXYZ</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">Full Stack Engineer</p>
+                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $120,000 - $160,000</p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
@@ -252,19 +261,19 @@
                 <!-- main-card-1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">Mobile First Corp</p>
-                        <p class="react mb-4 text-[16px]  text-gray-400">React Name Developer</p>
-                        <p class="remote text-[14px] text-gray-400 ">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="mobileFilter text-[18px] font-semibold text-blue-950">TechCorp Industries</p>
+                        <p class="react mb-4 text-[16px]  text-gray-400">Senior Frontend Developer</p>
+                        <p class="remote text-[14px] text-gray-400 ">San Francisco, CA• Full-time • $130,000 - $175,000</p>
                     </div>
                     <!-- part-2 -->
                     <div>
                         <p class="status  text-blue-950 font-semibold mb-4 bg-[#eef4ff] px-2 py-2 w-[120px] rounded-md">NOT APPLIED</p>
-                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="notes mb-4 text-[14px] text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of users We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
 
                         <div class="flex gap-5">
-                            <button class="int-btn text-[#22c55e] rounded-[4px] border-1 border-[#22c55e] px-2 py-1">INTERVIEW</button>
-                            <button class="rej-btn text-[#ef4444] border-1 border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
+                            <button class="int-btn text-[#22c55e] rounded-[4px] border border-[#22c55e] px-2 py-1">INTERVIEW</button>
+                            <button class="rej-btn text-[#ef4444] border border-[#ef4444] rounded-[4px] px-2 py-1">REJECTED</button>
                         </div>
                     
 
