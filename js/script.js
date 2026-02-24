@@ -58,6 +58,8 @@ function toggleStyle(id) {
 }
 
 mainContainer.addEventListener('click', function(event){
+
+    
     
     if(event.target.classList.contains('int-btn')){
         const parenNode = event.target.parentNode.parentNode;
@@ -210,5 +212,130 @@ function renderRejected (){
         `
 
         filterSection.appendChild(div)
+    }
+}
+
+function renderInterview() {
+
+    filterSection.innerHTML = '';
+
+    if (interviewList.length === 0) {
+
+        filterSection.innerHTML = `
+            <div class="text-center p-20 bg-gray-100 rounded-xl mt-6">
+        <img src="Job-Tracker/jobs.png" class="w-32 mx-auto mb-4" />
+        <h2 class="text-2xl font-semibold text-blue-950">
+            No jobs available
+        </h2>
+        <p class="text-gray-500 mt-2">
+            Check back soon for new job opportunities
+        </p>
+    </div>
+`;
+
+        return;
+    }
+
+
+    for (let interview of interviewList) {
+
+        let div = document.createElement('div');
+        div.className = 'card flex justify-between shadow-sm shadow-gray-500/50 p-6 rounded-[8px] mt-6';
+
+        div.innerHTML = `
+            <div class="space-y-6">
+                <div>
+                    <p class="mobileFilter text-[18px] font-semibold text-blue-950">${interview.mobileFilter}</p>
+                    <p class="react mb-4 text-[16px] text-gray-400">${interview.react}</p>
+                    <p class="remote text-[14px] text-gray-400">${interview.remote}</p>
+                </div>
+
+                <div>
+                    <p class="status text-green-600 bg-green-100 font-semibold mb-4 px-2 py-2 w-[120px] rounded-md">
+                        ${interview.status}
+                    </p>
+                    <p class="notes mb-4 text-[14px] text-gray-600">${interview.notes}</p>
+                </div>
+
+                <div class="flex gap-5">
+                    <button class="int-btn text-[#22c55e] border border-[#22c55e] px-2 py-1 rounded">
+                        INTERVIEW
+                    </button>
+                    <button class="rej-btn text-[#ef4444] border border-[#ef4444] px-2 py-1 rounded">
+                        REJECTED
+                    </button>
+                </div>
+            </div>
+
+        `;
+
+        filterSection.appendChild(div);
+    }
+}
+
+function renderRejected() {
+
+    filterSection.innerHTML = '';
+
+    if (rejectedList.length === 0) {
+
+        filterSection.innerHTML = `
+            <div class="text-center p-20 bg-gray-100 rounded-xl mt-6">
+                <img src="Job-Tracker/jobs.png" class="w-32 mx-auto mb-4" />
+                <h2 class="text-2xl font-semibold text-blue-950">
+                    No jobs available
+                </h2>
+                <p class="text-gray-500 mt-2">
+                    Check back soon for new job opportunities
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+   
+    for (let rejected of rejectedList) {
+
+        let div = document.createElement('div');
+        div.className = 'card flex justify-between shadow-sm shadow-gray-500/50 p-6 rounded-[8px] mt-6';
+
+        div.innerHTML = `
+            <div class="space-y-6">
+                <div>
+                    <p class="mobileFilter text-[18px] font-semibold text-blue-950">
+                        ${rejected.mobileFilter}
+                    </p>
+                    <p class="react mb-4 text-[16px] text-gray-400">
+                        ${rejected.react}
+                    </p>
+                    <p class="remote text-[14px] text-gray-400">
+                        ${rejected.remote}
+                    </p>
+                </div>
+
+                <div>
+                    <p class="status text-red-600 bg-red-100 font-semibold mb-4 px-2 py-2 w-[120px] rounded-md">
+                        ${rejected.status}
+                    </p>
+                    <p class="notes mb-4 text-[14px] text-gray-600">
+                        ${rejected.notes}
+                    </p>
+                </div>
+
+                <div class="flex gap-5">
+                    <button class="int-btn text-[#22c55e] border border-[#22c55e] px-2 py-1 rounded">
+                        INTERVIEW
+                    </button>
+                    <button class="rej-btn text-[#ef4444] border border-[#ef4444] px-2 py-1 rounded">
+                        REJECTED
+                    </button>
+                </div>
+            </div>
+
+
+        `;
+
+        filterSection.appendChild(div);
     }
 }
